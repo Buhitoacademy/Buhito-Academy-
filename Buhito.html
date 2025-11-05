@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buhito Academy | Preparación para Exámenes de Admisión</title>
+    <style>
+        /* Paleta de colores café */
+        :root {
+            --cafe-claro: #D7CCC8;
+            --cafe-capuchino: #A1887F;
+            --cafe-oscuro: #5D4037;
+            --blanco: #FFFFFF;
+            --texto: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--texto);
+            background-color: var(--cafe-claro);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--cafe-oscuro), var(--cafe-capuchino));
+            color: var(--blanco);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Secciones */
+        .section {
+            background: var(--blanco);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: var(--cafe-oscuro);
+            border-bottom: 2px solid var(--cafe-capuchino);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Productos */
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .producto {
+            background: var(--cafe-claro);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--cafe-oscuro);
+        }
+        
+        .producto h3 {
+            color: var(--cafe-oscuro);
+            margin-bottom: 1rem;
+        }
+        
+        .precio {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--cafe-oscuro);
+            margin: 1rem 0;
+        }
+        
+        /* Áreas */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .area {
+            background: var(--cafe-claro);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        
+        .area h4 {
+            color: var(--cafe-oscuro);
+            margin-bottom: 0.5rem;
+        }
+        
+        .materias {
+            list-style: none;
+        }
+        
+        .materias li {
+            padding: 0.2rem 0;
+            border-bottom: 1px dashed var(--cafe-capuchino);
+        }
+        
+        /* Beneficios */
+        .beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .beneficio {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        /* Contacto */
+        .contacto {
+            text-align: center;
+            background: var(--cafe-oscuro);
+            color: var(--blanco);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .contacto h2 {
+            color: var(--blanco);
+            border-bottom-color: var(--cafe-capuchino);
+        }
+        
+        .whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .whatsapp:hover {
+            transform: scale(1.05);
+        }
+
+        .redes-sociales {
+            margin: 1.5rem 0;
+        }
+
+        .red-social {
+            display: inline-block;
+            background: var(--cafe-capuchino);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .red-social:hover {
+            background: var(--cafe-oscuro);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--cafe-oscuro);
+            color: var(--blanco);
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .productos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🐦 Buhito Academy</h1>
+            <p>Tu camino hacia la universidad comienza aquí</p>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <main class="container">
+        <!-- Sobre Nosotros -->
+        <section class="section">
+            <h2>¿Por Qué Elegir Buhito Academy?</h2>
+            <p>En <strong>Buhito Academy</strong> somos especialistas en preparación para exámenes de admisión de todas las universidades. Contamos con un equipo de asesores altamente capacitados y material de estudio actualizado para garantizar tu ingreso.</p>
+        </section>
+
+        <!-- Productos -->
+        <section class="section">
+            <h2>Nuestros Cursos</h2>
+            <div class="productos">
+                <div class="producto">
+                    <h3>🎓 Material de Estudio Completo</h3>
+                    <p>Incluye guías, exámenes simulador, información de temas, clases grabadas y duración de un año.</p>
+                    <div class="precio">$150 MXN</div>
+                </div>
+                
+                <div class="producto">
+                    <h3>🚀 Curso BUAP 2026</h3>
+                    <p>Preparación especializada para la Benemérita Universidad Autónoma de Puebla</p>
+                    <div class="precio">$400 MXN</div>
+                    <p><strong>Duración:</strong> Desde que pagas hasta una semana antes del examen</p>
+                    <p><strong>Modalidad:</strong> 100% en línea</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horarios -->
+        <section class="section">
+            <h2>🕐 Horarios de Clases</h2>
+            <p><strong>Lunes a Sábados de 7:00 PM - 11:00 PM</strong></p>
+        </section>
+
+        <!-- Beneficios Curso BUAP -->
+        <section class="section">
+            <h2>✨ ¿Qué Incluye el Curso BUAP?</h2>
+            <div class="beneficios">
+                <div class="beneficio">
+                    <h4>📚 Material de Estudio</h4>
+                    <p>Completo y actualizado</p>
+                </div>
+                <div class="beneficio">
+                    <h4>🏫 Clases Presenciales</h4>
+                    <p>A partir de Marzo</p>
+                </div>
+                <div class="beneficio">
+                    <h4>💬 Asesoramiento Personalizado</h4>
+                    <p>Durante todo el proceso</p>
+                </div>
+                <div class="beneficio">
+                    <h4>📊 Simuladores Semanales</h4>
+                    <p>Para medir tu progreso</p>
+                </div>
+                <div class="beneficio">
+                    <h4>👩‍🏫 8 Asesoras Especializadas</h4>
+                    <p>Impartiendo clases cada hora</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Áreas de Estudio -->
+        <section class="section">
+            <h2>✨ Áreas Que Impartimos</h2>
+            
+            <div class="areas-grid">
+                <!-- Ciencias Naturales -->
+                <div class="area">
+                    <h4>🏥 Ciencias Naturales y de la Salud</h4>
+                    <ul class="materias">
+                        <li>Español</li>
+                        <li>Matemáticas</li>
+                        <li>Inglés</li>
+                        <li><strong>Área específica:</strong></li>
+                        <li>Biología</li>
+                        <li>Química</li>
+                        <li>Física</li>
+                        <li>Psicología</li>
+                    </ul>
+                </div>
+
+                <!-- Ciencias Exactas -->
+                <div class="area">
+                    <h4>👷‍♀️ Ciencias Exactas e Ingenierías</h4>
+                    <ul class="materias">
+                        <li>Español</li>
+                        <li>Matemáticas</li>
+                        <li>Inglés</li>
+                        <li><strong>Área específica:</strong></li>
+                        <li>Cálculo integral y diferencial</li>
+                        <li>Física</li>
+                        <li>Química</li>
+                    </ul>
+                </div>
+
+                <!-- Ciencias Sociales -->
+                <div class="area">
+                    <h4>📚 Ciencias Sociales y Humanidades</h4>
+                    <ul class="materias">
+                        <li>Español</li>
+                        <li>Matemáticas</li>
+                        <li>Inglés</li>
+                        <li><strong>Área específica:</strong></li>
+                        <li>Pedagogía</li>
+                        <li>Economía</li>
+                        <li>Arte</li>
+                        <li>Historia Universal</li>
+                        <li>Historia de México</li>
+                        <li>Filosofía</li>
+                    </ul>
+                </div>
+
+                <!-- Económico-Administrativo -->
+                <div class="area">
+                    <h4>💼 Ciencias Económico-Administrativo</h4>
+                    <ul class="materias">
+                        <li>Español</li>
+                        <li>Matemáticas</li>
+                        <li>Inglés</li>
+                        <li><strong>Área específica:</strong></li>
+                        <li>Administración</li>
+                        <li>Economía</li>
+                        <li>Finanzas</li>
+                        <li>Derecho</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contacto">
+            <h2>📞 ¡Inscríbete en Buhito Academy!</h2>
+            <p>No pierdas esta oportunidad de asegurar tu lugar en la universidad</p>
+            
+            <div class="redes-sociales">
+                <a href="https://wa.me/5217762275442" class="whatsapp" target="_blank">
+                    💬 WhatsApp: 776 227 5442
+                </a>
+                <br>
+                <a href="https://www.tiktok.com/@buhitoacademy" class="red-social" target="_blank">
+                    🎵 TikTok: @buhitoacademy
+                </a>
+            </div>
+            
+            <p style="margin-top: 1rem; opacity: 0.9;">
+                Contáctanos para más información sobre nuestros cursos
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Buhito Academy. Todos los derechos reservados.</p>
+            <p>Preparación profesional para exámenes de admisión universitaria</p>
+        </div>
+    </footer>
+</body>
+  </html>
